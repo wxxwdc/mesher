@@ -1,0 +1,27 @@
+package: github.com/go-chassis/mesher
+import:
+- package: github.com/ServiceComb/cse-collector
+- package: github.com/ServiceComb/go-cc-client
+  subpackages:
+  - member-discovery
+- package: github.com/ServiceComb/go-chassis
+  version: master
+- package: github.com/ServiceComb/go-sc-client
+  subpackages:
+  - model
+- package: github.com/emicklei/go-restful
+- package: github.com/go-chassis/gohessian
+- package: github.com/patrickmn/go-cache
+- package: github.com/prometheus/client_golang
+  subpackages:
+  - prometheus
+  - prometheus/promhttp
+- package: github.com/stretchr/testify
+  subpackages:
+  - mock
+- package: github.com/urfave/cli
+- package: gopkg.in/yaml.v2
+testImport:
+- package: github.com/prometheus/client_model
+  subpackages:
+  - go

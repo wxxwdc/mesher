@@ -9,10 +9,9 @@ import (
 	"github.com/ServiceComb/go-chassis/util/fileutil"
 	"github.com/go-chassis/mesher/cmd"
 	"github.com/go-chassis/mesher/config"
-	"github.com/stretchr/testify/assert"
-	"github.com/valyala/fasthttp"
 	"os"
 	"path/filepath"
+	"net/http"
 )
 
 func TestInit(t *testing.T) {
@@ -37,7 +36,7 @@ func TestInit(t *testing.T) {
 
 func TestResolve(t *testing.T) {
 	d := &DefaultDestinationResolver{}
-	header := fasthttp.RequestHeader{}
+	header := http.Header{}
 	header.Add("cookie", "user=jason")
 	header.Add("X-Age", "18")
 	mystring := "Server"
